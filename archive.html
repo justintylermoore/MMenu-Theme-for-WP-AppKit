@@ -1,0 +1,18 @@
+<!-------------------------------------------------------------->
+<!---------------------------Content---------------------------->
+<!-------------------------------------------------------------->
+
+<h1><%= list_title %></h1>
+<% if( posts.length ){ %>
+<ul>
+  <% _.each( posts, function( post ){ %>
+  <% var nb_comments = post.nb_comments %>
+  <li>
+    <h2> <a href="<%= TemplateTags.getPostLink(post.id) %>"><%= post.title %></a> &nbsp;<small><%= TemplateTags.formatDate(post.date,'d/m/Y') %></small> </h2>
+    <p><%= post.excerpt %></p>
+  </li>
+  <% }); %>
+</ul>
+<% }else{ %>
+<p>Sorry, nothing found!</p>
+<% } %>

@@ -1,0 +1,10 @@
+<!-------------------------------------------------------------->
+<!---------------------------Content---------------------------->
+<!-------------------------------------------------------------->
+
+<h1><%= post.title %></h1>
+<div class="my-page-content">
+  <% if( post.featured_img && post.featured_img.src && post.featured_img.src.length ){ %>
+  <img class="featured-image" src="<%= post.featured_img.src %>" />
+  <% } %>
+  <%= post.content %> </div>
